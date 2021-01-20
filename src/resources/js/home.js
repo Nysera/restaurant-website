@@ -2,6 +2,7 @@ import heroBackgroundImage from "../images/hero.jpg";
 import introImage1 from "../images/intro1.jpg";
 import introImage2 from "../images/intro2.jpg";
 import menuBackgroundImage from "../images/menu.jpg";
+import contactImage from "../images/map.jpg";
 
 
 const home = function() {
@@ -198,6 +199,7 @@ const home = function() {
     //  contact right column image
     const contactRightImage = document.createElement("div");
     contactRightImage.classList.add("contact_image");
+    contactRightImage.style.backgroundImage = `url("${contactImage}")`;
     contactRightCol.append(contactRightImage);
 
     // contact right column address
