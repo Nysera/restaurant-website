@@ -1,9 +1,9 @@
 // colors
 $primary: #C39D61;
 $background: #191a1a;
-$typo: #eee;
+$paragraph-typo: #eee;
 $grey-typo: #929292;
-$dark-typo: #252525;
+$dark-typo: #191a1a;
 
 // set html and body styles
 html {
@@ -18,7 +18,7 @@ html {
     box-sizing: inherit;
 }
 body {
-    color: $typo;
+    color: $paragraph-typo;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: normal;
@@ -36,6 +36,14 @@ a {
     color: inherit;
     cursor: pointer;
     transition: 0.4s ease;
+}
+
+// tel
+.tel {
+    @media(min-width: 1024px) {
+        cursor: pointer;
+        pointer-events: none;
+    }
 }
 
 // typography
@@ -537,20 +545,116 @@ p {
                 .contact-image {
                     position: relative;
                     width: 100%;
-                    padding-bottom: 50%;
+                    padding-bottom: 65%;
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
+                    @media(min-width: 600px) {
+                        padding-bottom: 50%;
+                    }
                     @media(min-width: 1000px) {
                         padding-bottom: 100%;
                     }
                 }
                 .contact-address {
-                    color: $typo;
+                    color: $paragraph-typo;
                     text-align: right;
                     padding: 10px 0;
                 }
             }
         }
+    }
+}
+
+// footer
+.footer {
+    position: relative;
+    padding: 40px 0;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transform: translateY(-50%);
+        background-color: $primary;
+        z-index: -1;
+    }
+
+    .footer-top {
+        margin: 0 20px;
+
+        .footer-top-inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: $dark-typo;
+            max-width: 1040px;
+            padding: 35px;
+            margin: 0 auto;
+            background: $primary;
+
+            .open-hours {
+                .hours {
+                    margin-bottom: 4px;
+                }
+            }
+
+            .col {
+                padding: 20px;
+
+                .title {
+                    color: $dark-typo;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+            .contact {
+                a {
+                    display: block;
+                    margin-bottom: 4px;
+    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+            .social {
+                a {
+                    display: inline-block;
+                    margin-right: 20px;
+    
+                    svg {
+                        fill: $dark-typo;
+                        transition: fill 0.4s ease;
+                    }
+                    &:hover {
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+            @media(min-width: 665px) {
+                justify-content: start;
+                text-align: center;
+
+                .col {
+                    width: 33.333333%;
+                }
+            }
+        }
+    }
+    .copyright {
+        color: $grey-typo;
+        text-align: center;
+        padding: 40px 20px 0 20px;
     }
 }
