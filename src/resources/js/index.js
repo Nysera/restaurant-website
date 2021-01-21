@@ -1,35 +1,37 @@
-// import CSS
 import "../css/styles.scss";
 import header from "../js/header.js";
 import navigationMenu from "../js/navigation-menu";
 import home from "../js/home";
+import footer from "./footer";
 
-const dom = (function() {
-    const setContentContainer = function() {
-        const contentContainer = document.createElement("div");
-        contentContainer.id = "content";
-        document.body.append(contentContainer);
-    };
-    const addEventDelegation = function() {
-        document.body.addEventListener("click", function(event){
-            if (event.target.classList.contains("menu-btn")) {
-                toggleMenu();
-            }
-        });
-    };
-    const toggleMenu = function () {
-        const body = document.body;
-        !body.classList.contains("menu-open") ? body.classList.add("menu-open") : body.classList.remove("menu-open")
-    };
+(function() {
+    const body = document.body;
 
-
-    
     const initialize = function() {
         header();
         navigationMenu();
         setContentContainer();
         home();
+        footer();
         addEventDelegation();
     };
+    const addEventDelegation = function() {
+        body.addEventListener("click", function(event) {
+            const target = event.target.classList;
+            if (target.contains("menu-btn")) {
+                toggleMenu();
+            }
+        });
+    };
+    const toggleMenu = function () {
+        !body.classList.contains("menu-open") ? body.classList.add("menu-open") : body.classList.remove("menu-open")
+    };
+    const setContentContainer = function() {
+        const contentContainer = document.createElement("div");
+        contentContainer.id = "content";
+        body.append(contentContainer);
+    };
+
+
     initialize();
-}());
+})();
