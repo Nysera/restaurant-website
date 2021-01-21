@@ -31,7 +31,7 @@ const navigationMenu = function() {
     // phone number
     const navFooterPhone = document.createElement("a");
     navFooterPhone.classList.add("tel");
-    navFooterPhone.setAttribute("href", "(03)15381349");
+    navFooterPhone.setAttribute("href", "tel:(03)15381349");
     navFooterPhone.innerHTML = "(03) 1538 1349";
     navFooter.append(navFooterPhone);
 
