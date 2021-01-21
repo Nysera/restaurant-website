@@ -13,13 +13,13 @@ const home = function() {
 
     // hero image
     const heroImage = document.createElement("div");
-    heroImage.classList.add("hero_image");
+    heroImage.classList.add("hero-image");
     heroImage.style.backgroundImage = `url("${heroBackgroundImage}")`;
     heroContainer.append(heroImage);
 
     // hero content
     const heroInner = document.createElement("div");
-    heroInner.classList.add("hero_inner")
+    heroInner.classList.add("hero-inner")
     heroContainer.append(heroInner);
     const heroInnerH1 = document.createElement("h1");
     heroInnerH1.innerHTML = `Open For Dine <span>In</span> Or Take <span>Out</span>`;
@@ -41,7 +41,7 @@ const home = function() {
 
     // intro wrapper
     const introWrapper = document.createElement("div");
-    introWrapper.classList.add("intro_wrapper");
+    introWrapper.classList.add("intro-wrapper");
     container.append(introWrapper);
 
     // left column
@@ -49,7 +49,7 @@ const home = function() {
     leftCol.classList.add("left");
     introWrapper.append(leftCol);
     const leftColImage = document.createElement("div");
-    leftColImage.classList.add("intro_image");
+    leftColImage.classList.add("intro-image");
     leftColImage.style.backgroundImage = `url("${introImage1}")`;
     leftCol.append(leftColImage);
 
@@ -75,7 +75,7 @@ const home = function() {
 
     // right column buttons
     const rightColButtonWrapper = document.createElement("div");
-    rightColButtonWrapper.classList.add("intro_buttons");
+    rightColButtonWrapper.classList.add("intro-buttons");
     rightCol.append(rightColButtonWrapper);
 
     // reserve button
@@ -97,7 +97,7 @@ const home = function() {
 
     // right column image
     const rightColImage = document.createElement("div");
-    rightColImage.classList.add("intro_image-2");
+    rightColImage.classList.add("intro-image-2");
     rightColImage.style.backgroundImage = `url("${introImage2}")`;
     rightCol.append(rightColImage);
 
@@ -117,18 +117,18 @@ const home = function() {
 
     // menu wrapper
     const menuInnerContainerWrapper = document.createElement("div");
-    menuInnerContainerWrapper.classList.add("menu_wrapper");
+    menuInnerContainerWrapper.classList.add("menu-wrapper");
     menuInnerContainer.append(menuInnerContainerWrapper);
 
     // menu image
     const menuImage = document.createElement("div");
-    menuImage.classList.add("menu_image");
+    menuImage.classList.add("menu-image");
     menuImage.style.backgroundImage = `url("${menuBackgroundImage}")`;
     menuInnerContainerWrapper.append(menuImage);
 
     // menu content
     const menuInner = document.createElement("div");
-    menuInner.classList.add("menu_inner");
+    menuInner.classList.add("menu-inner");
     menuInnerContainerWrapper.append(menuInner);
 
      // menu h2
@@ -165,7 +165,7 @@ const home = function() {
 
     // contact wrapper
     const contactWrapper = document.createElement("div");
-    contactWrapper.classList.add("contact_wrapper");
+    contactWrapper.classList.add("contact-wrapper");
     contactInnerContainer.append(contactWrapper);
 
     // contact left column
@@ -198,13 +198,13 @@ const home = function() {
 
     //  contact right column image
     const contactRightImage = document.createElement("div");
-    contactRightImage.classList.add("contact_image");
+    contactRightImage.classList.add("contact-image");
     contactRightImage.style.backgroundImage = `url("${contactImage}")`;
     contactRightCol.append(contactRightImage);
 
     // contact right column address
     const contactRightAddress = document.createElement("div");
-    contactRightAddress.classList.add("contact_address");
+    contactRightAddress.classList.add("contact-address");
     contactRightAddress.innerHTML = "Harcourt Street, Brisbane, QLD, 4005";
     contactRightCol.append(contactRightAddress);
 
