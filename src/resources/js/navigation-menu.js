@@ -29,13 +29,15 @@ const navigationMenu = function() {
     navInner.append(navFooter);
 
     // phone number
-    const navFooterPhone = document.createElement("span");
+    const navFooterPhone = document.createElement("a");
+    navFooterPhone.classList.add("tel");
+    navFooterPhone.setAttribute("href", "(03)15381349");
     navFooterPhone.innerHTML = "(03) 1538 1349";
     navFooter.append(navFooterPhone);
 
     // email
     const navFooterEmail = document.createElement("a");
-    navFooterEmail.setAttribute("href", "/");
+    navFooterEmail.setAttribute("href", "mailto:contact@aurora.com");
     navFooterEmail.innerHTML = "contact@aurora.com";
     navFooter.append(navFooterEmail);
 
