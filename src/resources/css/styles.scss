@@ -96,12 +96,14 @@ p {
     span {
         position: relative;
         z-index: 1;
+        pointer-events: none;
     }
     svg {
         position: relative;
         fill: $dark-typo;
         z-index: 1;
         transition: fill 0.4s ease;
+        pointer-events: none;
     }
 }
 .btn.btn-solid {
