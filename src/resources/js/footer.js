@@ -84,4 +84,4 @@ const footer = function() {
     document.body.append(footerContainer);
 };
 
-module.exports = footer;
+export default footer;
