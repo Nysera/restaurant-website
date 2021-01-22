@@ -143,7 +143,7 @@ const home = function() {
 
     // menu button
     const menuButton = document.createElement("button");
-    menuButton.classList.add("btn", "btn-solid");
+    menuButton.classList.add("btn", "btn-solid", "menu-page");
     menuInner.append(menuButton);
     const menuButtonSpan = document.createElement("span");
     menuButtonSpan.innerHTML = "View Menu";
