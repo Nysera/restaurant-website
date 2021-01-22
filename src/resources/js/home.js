@@ -209,7 +209,7 @@ const home = function() {
     contactRightCol.append(contactRightAddress);
 
 
-    // append menu to #content container
+    // append contact to #content container
     document.querySelector("#content").append(contactContainer);
 };
 
