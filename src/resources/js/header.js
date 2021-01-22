@@ -3,6 +3,11 @@ const header = function() {
     const headerElement = document.createElement("header");
     headerElement.classList.add("header");
 
+    // header inner
+    const headerInner = document.createElement("div");
+    headerInner.classList.add("header-inner");
+    headerElement.append(headerInner);
+
     // menu button
     const menuBtn = document.createElement("button");
     menuBtn.classList.add("btn", "menu-btn");
@@ -11,7 +16,7 @@ const header = function() {
         menuBtn.append(menuBtnSpan);
     }
     // append menuBtn to header container
-    headerElement.append(menuBtn);
+    headerInner.append(menuBtn);
 
     // logo
     const logo = document.createElement("div");
@@ -21,7 +26,7 @@ const header = function() {
     logoAnchorTag.innerHTML = " Auror<span>a</span>";
     logo.append(logoAnchorTag);
     // append logo to header container
-    headerElement.append(logo);
+    headerInner.append(logo);
 
     // reservation button
     const reservationBtn = document.createElement("button");
@@ -31,7 +36,7 @@ const header = function() {
     reservationBtnText.innerHTML = "Reserve";
     reservationBtn.prepend(reservationBtnText);
     // append reservationBtn to header container
-    headerElement.append(reservationBtn);
+    headerInner.append(reservationBtn);
 
     // append header to body
     document.body.append(headerElement);
