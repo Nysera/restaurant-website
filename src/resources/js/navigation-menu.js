@@ -19,7 +19,7 @@ const navigationMenu = function() {
     for (let i= 0; i < 3; i++) {
         const linkNames = ["home", "menu", "contact"];
         const navInnerLinksButtons = document.createElement("button");
-        navInnerLinksButtons.classList.add(`${linkNames[i]}-page`);
+        navInnerLinksButtons.classList.add(`${linkNames[i]}-page-btn`);
         navInnerLinksButtons.innerHTML = linkNames[i];
         navInnerLinks.append(navInnerLinksButtons);
     }
