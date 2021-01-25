@@ -108,7 +108,7 @@ const home = function() {
     // menu section
     // menu container
     const menuContainer = document.createElement("div");
-    menuContainer.classList.add("menu");
+    menuContainer.classList.add("our-menu");
 
     // menu inner container
     const menuInnerContainer = document.createElement("div");
@@ -143,7 +143,7 @@ const home = function() {
 
     // menu button
     const menuButton = document.createElement("button");
-    menuButton.classList.add("btn", "btn-solid", "menu-page");
+    menuButton.classList.add("btn", "btn-solid", "menu-page-btn");
     menuInner.append(menuButton);
     const menuButtonSpan = document.createElement("span");
     menuButtonSpan.innerHTML = "View Menu";
