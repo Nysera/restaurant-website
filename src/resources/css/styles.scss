@@ -527,7 +527,7 @@ p {
 
     // contact
     .contact {
-        padding: 90px 0 180px 0;
+        padding: 90px 0;
 
         .contact-wrapper {
             display: flex;
@@ -685,15 +685,16 @@ p {
 
         .intro-wrapper {
             text-align: center;
+            padding: 0 20px;
         }
     }
     .menu-wrapper {
-        padding: 90px 0 180px 0;
+        padding: 90px 0;
 
         .grid {
             border-bottom: 1px solid rgb(255 255 255 / 15%);
             padding-bottom: 25px;
-            margin-bottom: 60px;
+            margin: 0 20px 60px 20px;
 
             .grid-title {
                 color: #fff;
@@ -705,8 +706,11 @@ p {
                 flex-wrap: wrap;
 
                 .menu-item {
-                    width: 50%;
+                    width: 100%;
                     margin-bottom: 35px;
+                    @media(min-width: 768px) {
+                        width: 50%;
+                    }
 
                     .menu-item-title {
                         color: inherit;
@@ -722,15 +726,14 @@ p {
                         }
                     }
                     .menu-item-description {
-                        max-width: 450px;
                         color: $grey-typo;
-
+                        padding-right: 20%;
                     }
                 }
             }
             &:last-child {
                 border: none;
-                margin: 0;
+                margin: 0 20px 0 20px;
             }
         }
     }
