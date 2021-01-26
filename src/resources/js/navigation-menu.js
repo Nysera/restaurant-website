@@ -46,4 +46,4 @@ const navigationMenu = function() {
     document.body.append(navElement);
 };
 
-module.exports = navigationMenu;
+export default navigationMenu;
