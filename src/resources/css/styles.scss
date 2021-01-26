@@ -53,7 +53,7 @@ h1 {
     font-size: 54px;
     font-weight: 600;
     letter-spacing: 3px;
-    margin: 0;
+    margin: 0 0 30px 0;
 }
 h2 {
     color: #fff;
@@ -387,6 +387,8 @@ p {
             z-index: 1;
 
             h1 {
+                margin: 0;
+                
                 @media(min-width: 1200px) {
                     font-size: 70px; 
                 }
@@ -482,7 +484,7 @@ p {
     }
 
     // menu
-    .menu {
+    .our-menu {
         height: 75vh;
 
         .container {
@@ -525,7 +527,7 @@ p {
 
     // contact
     .contact {
-        padding: 90px 0;
+        padding: 90px 0 180px 0;
 
         .contact-wrapper {
             display: flex;
@@ -671,5 +673,65 @@ p {
         color: $grey-typo;
         text-align: center;
         padding: 40px 20px 0 20px;
+    }
+}
+
+// menu page
+.menu-page {
+    padding-top: 100px;
+
+    .menu-intro {
+        padding: 90px 0;
+
+        .intro-wrapper {
+            text-align: center;
+        }
+    }
+    .menu-wrapper {
+        padding: 90px 0 180px 0;
+
+        .grid {
+            border-bottom: 1px solid rgb(255 255 255 / 15%);
+            padding-bottom: 25px;
+            margin-bottom: 60px;
+
+            .grid-title {
+                color: #fff;
+                font-size: 34px;
+            }
+            .q1 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .menu-item {
+                    width: 50%;
+                    margin-bottom: 35px;
+
+                    .menu-item-title {
+                        color: inherit;
+                        font-size: 18px;
+    
+                        .title {
+                            display: inline-block;
+                            margin-right: 40px;
+                        }
+                        .price {
+                            display: inline-block;
+                            color: $primary
+                        }
+                    }
+                    .menu-item-description {
+                        max-width: 450px;
+                        color: $grey-typo;
+
+                    }
+                }
+            }
+            &:last-child {
+                border: none;
+                margin: 0;
+            }
+        }
     }
 }
