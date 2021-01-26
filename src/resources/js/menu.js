@@ -52,7 +52,7 @@ const menu = function() {
 
     // menu grid item wrapper
     const menuPageMenuGridItemWrapperEntrees = document.createElement("div");
-    menuPageMenuGridItemWrapperEntrees.classList.add("q1");
+    menuPageMenuGridItemWrapperEntrees.classList.add("grid-wrapper");
     menuPageMenuGridEntrees.append(menuPageMenuGridItemWrapperEntrees);
 
     // Menu items
@@ -171,7 +171,7 @@ const menu = function() {
 
     // menu grid item wrapper
     const menuPageMenuGridItemWrapperMains = document.createElement("div");
-    menuPageMenuGridItemWrapperMains.classList.add("q1");
+    menuPageMenuGridItemWrapperMains.classList.add("grid-wrapper");
     menuPageMenuGridMains.append(menuPageMenuGridItemWrapperMains);
 
     // mains loop
@@ -219,7 +219,7 @@ const menu = function() {
 
     // menu grid item wrapper
     const menuPageMenuGridItemWrapperDeserts = document.createElement("div");
-    menuPageMenuGridItemWrapperDeserts.classList.add("q1");
+    menuPageMenuGridItemWrapperDeserts.classList.add("grid-wrapper");
     menuPageMenuGridDeserts.append(menuPageMenuGridItemWrapperDeserts);
 
     // deserts loop
