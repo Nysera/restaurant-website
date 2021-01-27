@@ -110,26 +110,16 @@ const home = function() {
     const menuContainer = document.createElement("div");
     menuContainer.classList.add("our-menu");
 
-    // menu inner container
-    const menuInnerContainer = document.createElement("div");
-    menuInnerContainer.classList.add("container");
-    menuContainer.append(menuInnerContainer);
-
-    // menu wrapper
-    const menuInnerContainerWrapper = document.createElement("div");
-    menuInnerContainerWrapper.classList.add("menu-wrapper");
-    menuInnerContainer.append(menuInnerContainerWrapper);
-
     // menu image
     const menuImage = document.createElement("div");
     menuImage.classList.add("menu-image");
     menuImage.style.backgroundImage = `url("${menuBackgroundImage}")`;
-    menuInnerContainerWrapper.append(menuImage);
+    menuContainer.append(menuImage);
 
     // menu content
     const menuInner = document.createElement("div");
     menuInner.classList.add("menu-inner");
-    menuInnerContainerWrapper.append(menuInner);
+    menuContainer.append(menuInner);
 
      // menu h2
      const menuH2 = document.createElement("h2");
@@ -202,12 +192,27 @@ const home = function() {
     contactRightImage.style.backgroundImage = `url("${contactImage}")`;
     contactRightCol.append(contactRightImage);
 
+    // contact right column location
+    const contactRightLocation = document.createElement("div");
+    contactRightLocation.classList.add("contact-location");
+    contactRightCol.append(contactRightLocation);
+
     // contact right column address
     const contactRightAddress = document.createElement("div");
     contactRightAddress.classList.add("contact-address");
-    contactRightAddress.innerHTML = "Harcourt Street, Brisbane, QLD, 4005";
-    contactRightCol.append(contactRightAddress);
+    contactRightAddress.innerHTML = "Harcourt Street, Brisbane, QLD 4005";
+    contactRightLocation.append(contactRightAddress);
 
+    // contact right column get directions
+    const contactRightGetDirections = document.createElement("div");
+    contactRightGetDirections.classList.add("contact-directions");
+    contactRightLocation.append(contactRightGetDirections);
+
+    // contact right column get directions
+    const contactRightGetDirectionsAnchor = document.createElement("a");
+    contactRightGetDirectionsAnchor.setAttribute("href", "/");
+    contactRightGetDirectionsAnchor.innerHTML = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"><path d="M8 0c-2.761 0-5 2.239-5 5 0 5 5 11 5 11s5-6 5-11c0-2.761-2.239-5-5-5zM8 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg>Get Directions`;
+    contactRightGetDirections.append(contactRightGetDirectionsAnchor);
 
     // append contact to #content container
     document.querySelector("#content").append(contactContainer);
