@@ -434,11 +434,9 @@ p {
             }
             .right {
                 width: 100%;
-                text-align: center;
                 margin: 0 20px;
                 @media(min-width: 1000px) {
                     width: 50%;
-                    text-align: left;
                     margin: 0 20px 0 20px;
                 }
 
@@ -485,42 +483,32 @@ p {
 
     // menu
     .our-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         height: 75vh;
 
-        .container {
+        .menu-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 100%;
-            max-width: 1550px;
-
-            .menu-wrapper {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                height: 100%;
-                margin: 0 20px;
-
-                .menu-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-position: center center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    opacity: 0.6;
-                }
-            }
-            .menu-inner {
-                position: relative;
-                text-align: center;
-                padding: 0 20px;
-                z-index: 1;
-                
-                button {
-                    margin-top: 45px;
-                }
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+        }
+        .menu-inner {
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
+            z-index: 1;
+            
+            button {
+                margin-top: 45px;
             }
         }
     }
@@ -573,10 +561,43 @@ p {
                         padding-bottom: 100%;
                     }
                 }
-                .contact-address {
-                    color: $paragraph-typo;
-                    text-align: right;
-                    padding: 10px 0;
+                .contact-location {
+                    padding: 15px 0;
+
+                    .contact-address {
+                        display: inline-block;
+                        width: 50%;
+                        color: $grey-typo;
+                        text-align: left;
+                    }
+                    .contact-directions {
+                        display: inline-block;
+                        width: 50%;
+                        text-align: right;
+
+                        a {
+                            color: #fff;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+
+                            svg {
+                                position: relative;
+                                top: 2px;
+                                fill: #fff;
+                                margin-right: 8px;
+                                transition: fill 0.4s ease;
+                            }
+
+                            &:hover {
+                                color: $primary;
+
+                                svg {
+                                    fill: $primary;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -609,7 +630,7 @@ p {
             justify-content: space-between;
             flex-wrap: wrap;
             color: $dark-typo;
-            max-width: 1240px;
+            max-width: 1450px;
             padding: 35px;
             margin: 0 auto;
             background: $primary;
@@ -692,9 +713,13 @@ p {
         padding: 90px 0;
 
         .grid {
+            text-align: center;
             border-bottom: 1px solid rgb(255 255 255 / 15%);
             padding-bottom: 25px;
             margin: 0 20px 60px 20px;
+            @media(min-width: 768px) {
+                text-align: left;
+            }
 
             .grid-title {
                 color: #fff;
@@ -727,7 +752,9 @@ p {
                     }
                     .menu-item-description {
                         color: $grey-typo;
-                        padding-right: 20%;
+                        @media(min-width: 768px) {
+                            padding-right: 20%;
+                        }
                     }
                 }
             }
