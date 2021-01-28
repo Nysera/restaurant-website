@@ -175,7 +175,7 @@ const home = function() {
 
     // contact left column button
     const contactLeftColButton = document.createElement("button");
-    contactLeftColButton.classList.add("btn", "btn-solid");
+    contactLeftColButton.classList.add("btn", "btn-solid", "contact-page-btn");
     contactLeftCol.append(contactLeftColButton);
     const contactButtonSpan = document.createElement("span");
     contactButtonSpan.innerHTML = "Contact";
