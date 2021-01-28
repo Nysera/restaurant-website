@@ -1,7 +1,7 @@
 const header = function() {
     // header container
     const headerElement = document.createElement("header");
-    headerElement.classList.add("header");
+    headerElement.classList.add("header", "header-top");
 
     // header inner
     const headerInner = document.createElement("div");
