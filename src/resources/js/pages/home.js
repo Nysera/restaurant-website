@@ -1,8 +1,8 @@
-import heroBackgroundImage from "../images/hero.jpg";
-import introImage1 from "../images/intro1.jpg";
-import introImage2 from "../images/intro2.jpg";
-import menuBackgroundImage from "../images/menu.jpg";
-import contactImage from "../images/map.jpg";
+import heroBackgroundImage from "../../images/hero.jpg";
+import introImage1 from "../../images/intro1.jpg";
+import introImage2 from "../../images/intro2.jpg";
+import menuBackgroundImage from "../../images/menu.jpg";
+import contactImage from "../../images/map.jpg";
 
 
 const home = function() {
@@ -80,7 +80,7 @@ const home = function() {
 
     // reserve button
     const reserveBtn = document.createElement("button");
-    reserveBtn.classList.add("btn", "btn-solid");
+    reserveBtn.classList.add("btn", "btn-solid", "reservation-btn");
     rightColButtonWrapper.append(reserveBtn);
     const reserveBtnSpan = document.createElement("span");
     reserveBtnSpan.innerHTML = "Reserve A Table";
