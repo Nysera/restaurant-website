@@ -60,7 +60,7 @@ const home = function() {
 
     // right column h2
     const rightColH2 = document.createElement("h2");
-    rightColH2.innerHTML = "Welcome to Auror<span>a</span>";
+    rightColH2.innerHTML = "Welcome to <span>Auror<span>a</span><span>";
     rightCol.append(rightColH2);
 
     // right column paragraph
