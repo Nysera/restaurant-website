@@ -67,12 +67,12 @@ const menu = function() {
                 {
                     name: "Seared Pork Belly",
                     description: "tomato biscuit | marinated tomatoes | pesto purée | lavender jus",
-                    price: "$14"
+                    price: "$14.00"
                 },
                 {
                     name: "Mac & Cheese",
                     description: "cheese | bacon | rye breadcrumbsn",
-                    price: "$14"
+                    price: "$14.00"
                 },
                 {
                     name: "Roasted Beets",
