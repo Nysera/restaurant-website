@@ -1,9 +1,10 @@
 // colors
-$primary: #C39D61;
+$primary: #a98d65;
 $background: #191a1a;
-$paragraph-typo: #eee;
-$grey-typo: #929292;
+$paragraph-typo: #F2E9E4;
+$grey-typo: #9c9c9c;
 $dark-typo: #191a1a;
+$form-error: #9b4d46;
 
 // set html and body styles
 html {
@@ -48,7 +49,7 @@ a {
 
 // typography
 h1 {
-    color: #fff;
+    color: $primary;
     font-family: 'Playfair Display', sans-serif;
     font-size: 54px;
     font-weight: 600;
@@ -56,7 +57,7 @@ h1 {
     margin: 0 0 30px 0;
 }
 h2 {
-    color: #fff;
+    color: $primary;
     font-family: 'Playfair Display', sans-serif;
     font-size: 48px;
     font-weight: 600;
@@ -75,8 +76,7 @@ p {
     min-height: 48px;
     color: $dark-typo;
     font-family: 'Lato', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 14px;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -114,13 +114,15 @@ p {
         left: -100%;
         width: 100%;
         height: 100%;
-        background-color: #9b4d46;
+        // background-color: #9b4d46;
+        background-color: #977c55;
         transition: left 0.4s ease;
     }
     &:hover {
-        color: #fff;
+        color: $dark-typo;
+
         svg {
-            fill: #fff;
+            fill: $dark-typo;
         }
         &::before {
             left: 0;
@@ -397,6 +399,7 @@ p {
             z-index: 1;
 
             h1 {
+                color: #fff;
                 margin: 0;
                 
                 @media(min-width: 1200px) {
@@ -452,7 +455,11 @@ p {
 
                 h2 { 
                     span {
-                        color: $primary;
+                        color: #fff;
+
+                        span {
+                            color: $primary;
+                        }
                     }
                 }
                 .intro-buttons {
@@ -516,7 +523,10 @@ p {
             text-align: center;
             padding: 0 20px;
             z-index: 1;
-            
+
+            h2 {
+                color: #fff;
+            }
             button {
                 margin-top: 45px;
             }
@@ -613,8 +623,8 @@ p {
 
 // footer
 .footer {
+    padding-top: 60px;
     position: relative;
-    padding: 40px 0;
 
     &::before {
         content: " ";
@@ -623,7 +633,6 @@ p {
         left: 0;
         width: 100%;
         height: 4px;
-        transform: translateY(-50%);
         background-color: $primary;
         z-index: -1;
     }
@@ -637,8 +646,8 @@ p {
             justify-content: space-between;
             flex-wrap: wrap;
             color: $dark-typo;
-            max-width: 1450px;
-            padding: 35px;
+            max-width: 1440px;
+            padding: 40px;
             margin: 0 auto;
             background: $primary;
 
@@ -700,7 +709,7 @@ p {
     .copyright {
         color: $grey-typo;
         text-align: center;
-        padding: 40px 20px 0 20px;
+        padding: 30px 20px;
     }
 }
 
@@ -724,7 +733,6 @@ p {
             margin: 0 20px 60px 20px;
 
             .grid-title {
-                color: #fff;
                 font-size: 34px;
             }
             .grid-wrapper {
@@ -763,6 +771,239 @@ p {
             &:last-child {
                 border: none;
                 margin: 0 20px 0 20px;
+            }
+        }
+    }
+}
+
+// contact page
+.contact-page {
+    padding-top: 100px;
+    @media(min-width: 1000px) {
+        padding: 0;
+    }
+
+    .contact-intro {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 60px 0;
+            @media(min-width: 1000px) {
+                width: 50%;
+            }
+
+            .content {
+                padding: 0 20px;
+                max-width: 650px;
+
+                p {
+                    margin-bottom: 45px;
+                }
+                .details {
+                    margin-bottom: 14px;
+
+                    .title {
+                        color: $primary;
+                        font-weight: 600;
+                        margin-right: 14px;
+                    }
+                    a {
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+                .social {
+                    padding: 34px 0;
+
+                    a {
+                        display: inline-block;
+                        margin-right: 20px;
+
+                        svg {
+                            fill: $paragraph-typo;
+                            transition: fill 0.4s ease;
+                        }
+
+                        &:hover {
+                            svg {
+                                fill: $primary;
+                            }
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            position: relative;
+            width: 100%;
+            min-height: 65vh;
+            @media(min-width: 1000px) {
+                width: 50%;
+                min-height: 100vh;
+            }
+
+            .contact-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+            .contact-directions {
+                position: absolute;
+                right: 20px;
+                bottom: 26px;
+                a {
+                    color: $paragraph-typo;
+
+                    svg {
+                        position: relative;
+                        top: 2px;
+                        fill: $paragraph-typo;
+                        margin-right: 8px;
+                        transition: fill 0.4s ease;
+                    }
+                    &:hover {
+                        color: $primary;
+
+                        svg {
+                            fill: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-form {
+        padding: 90px 0;
+
+        .contact-form-intro {
+            padding: 0 20px 45px 20px;
+        }
+        .contact-form-wrapper {
+            padding: 0 20px;
+
+            form {
+                padding: 0;
+                margin: 0;
+                
+                .required-fields {
+                    color: $grey-typo;
+                    font-size: 14px;
+                    margin-bottom: 45px;
+
+                    span {
+                        color: $form-error;
+                    }
+                }
+                .form-group {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 45px;
+
+                    label {
+                        display: block;
+                        position: absolute;
+                        color: $paragraph-typo;
+                        font-size: 18px;
+                        top: 0;
+                        left: 0;
+                        height: 70px;
+                        line-height: 70px;
+                        transition: top 0.4s ease, left 0.4s ease, color 0.4s ease, transform 0.4s ease;
+                        cursor: pointer;
+
+                        span {
+                            color: $form-error;
+                            margin-left: 4px;
+                        }
+                    }
+                    input {
+                        display: block;
+                        color: $paragraph-typo;
+                        font-family: 'Lato', sans-serif;
+                        font-size: 18px;
+                        width: 100%;
+                        height: 70px;
+                        line-height: 70px;
+                        border: none;
+                        border-bottom: 2px solid rgb($grey-typo, 0.2);
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        margin: 0 0 10px 0;
+                        transition: border-color 0.4s ease;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    textarea {
+                        display: block;
+                        color: $paragraph-typo;
+                        font-family: 'Lato', sans-serif;
+                        font-size: 18px;
+                        width: 100%;
+                        height: auto;
+                        border: none;
+                        border-bottom: 2px solid rgb($grey-typo, 0.2);
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 22px 0;
+                        margin: 0 0 10px 0;
+                        outline: none;
+                        cursor: pointer;
+                    }
+
+                    .error-list {
+                        color: $form-error;
+                        font-size: 14px;
+                    }
+                }
+                .error {
+                    label {
+                        color: $form-error;
+                    }
+                    input, textarea {
+                        border-color: $form-error;
+                    }
+                }
+                .focused {
+                    label {
+                        top: -40px;
+                        left: -6px;
+                        color: $primary;
+                        transform: scale(0.85);
+                    }
+                    input, textarea {
+                        border-color: $primary;
+                    }
+                }
+                .success-message {
+                    display: block;
+                    color: #6ab158;
+                    margin: 28px 0 0 0;
+
+                    @media(min-width: 768px) {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0 0 0 45px;
+                    }
+                }
+            }
+            button {
+                min-width: 180px;
             }
         }
     }
