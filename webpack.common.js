@@ -9,7 +9,8 @@ module.exports = {
         rules: [
             // CSS/SCSS
             {
-                test: /\.s[ac]ss$/i,
+                // test: /\.s[ac]ss$/i,
+                test: /\.s?css$/,
                 use: [
                     "style-loader",
                     "css-loader",
