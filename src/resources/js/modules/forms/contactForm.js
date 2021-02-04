@@ -1,4 +1,5 @@
 import formValidation from "../helpers/formValidation";
+import formFocus from "../helpers/formFocus";
 
 const contactform = function() {
     // form container
@@ -99,19 +100,8 @@ const contactform = function() {
     formButton.innerHTML = "<span>Send</span>";
     form.append(formButton);
 
-    // form focus event listeners
-    form.addEventListener("focusin", function(event) {
-        if (event.target.classList.contains("form-control")) {
-            const el = event.target.parentElement;
-            el.classList.add("focused");
-        }
-    });
-    form.addEventListener("focusout", function(event) {
-        if (event.target.classList.contains("form-control") && event.target.value.length === 0) {
-            const el = event.target.parentElement;
-            el.classList.remove("focused");
-        }
-    });
+    // form focus
+    formFocus(form);
 
     // validate form
     const validation = new formValidation(form, [formGroupNameInput, formGroupPhoneInput, formGroupEmailInput, formGroupMessageInput]);
