@@ -267,7 +267,7 @@ p {
         justify-content: space-between;
         width: 100%;
         height: 100%;
-        padding: 20px;
+        padding: 101px 20px 20px;
 
         .nav-links {
             display: flex;
@@ -351,17 +351,25 @@ p {
                     transform: rotate(45deg);
                     transition: transform 0.4s ease, width 0s ease;
                 } 
-               span:nth-child(2) {
-                   width: 40px;
-                   left: -100%;
-                   transition: width 0s ease;
-               } 
-               span:nth-child(3) {
+                span:nth-child(2) {
+                    width: 40px;
+                    left: -100%;
+                    transition: width 0s ease;
+                } 
+                span:nth-child(3) {
                    top: 11px;
                    transform: rotate(-45deg);
                    width: 40px;
                    transition: transform 0.4s ease;
-                } 
+                }
+                &:hover {
+                    span:first-child {
+                        transform: rotate(0deg);   
+                    }
+                    span:nth-child(3) {
+                        transform: rotate(0deg);  
+                    }
+                }
             }
         }
     }
@@ -466,17 +474,11 @@ p {
                     margin-top: 45px;
 
                     button {
-                        margin: 0 0 10px 0;
-                        @media(min-width: 450px) {
-                            margin: 0 10px 10px 0;  
-                        }
+                        margin: 0 20px 10px 0;
                     }
                     
                     a {
-                        margin: 0 0 10px 0;
-                        @media(min-width: 450px) {
-                            margin: 0 0 10px 10px;
-                        }
+                        margin: 0 20px 10px 0;
                     }
                 }
                 .intro-image-2 {
@@ -1001,10 +1003,182 @@ p {
                         margin: 0 0 0 45px;
                     }
                 }
-            }
-            button {
-                min-width: 180px;
+                button {
+                    min-width: 180px;
+                }
             }
         }
+    }
+}
+
+// booking modal
+.reservation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 101;
+
+    .reservation-close-btn {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+           span {
+                &:first-child {
+                    transform: rotate(0deg);
+                }
+                &:nth-child(2) {
+                    transform: rotate(0deg);
+                }
+           }
+        }
+
+        span {
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: #fff;
+            transition: transform 0.4s ease;
+            pointer-events: none;
+
+            &:first-child {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 1240px;
+        min-height: 100%;
+        margin: 0 auto;
+
+        .reservation-modal-wrapper {
+            padding: 90px 0;
+
+            .reservation-modal-intro {
+                padding: 0 20px 45px 20px;
+            }
+            form {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 0;
+    
+                .form-group {
+                    width: 100%;
+                    padding: 0 20px;
+                    margin-bottom: 45px;
+                    @media(min-width: 500px) and (max-width: 767px) {
+                        &:first-child {
+                            width: 50%;
+                        }
+                        &:nth-child(2) {
+                            width: 50%;
+                        }
+                    }
+                    @media(min-width: 768px) {
+                        width: 33.333%;
+                    }
+                    
+                    label {
+                        display: block;
+                        color: $primary;
+                    }
+                    select {
+                        appearance: none;
+                    }
+                    select {
+                        background-image: url(/src/resources/images/arrow-down.svg);
+                        background-size: 14px;
+                        background-position: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    select {
+                        display: block;
+                        color: $paragraph-typo;
+                        font-family: "Lato", sans-serif;
+                        font-size: 18px;
+                        width: 100%;
+                        height: 60px;
+                        border: none;
+                        border-bottom: 2px solid rgb($grey-typo, 0.2);
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0 15px 0 0;
+                        margin: 0;
+                        transition: border 0.4s ease;
+                        outline: none;
+                        
+                        option {
+                            color: $dark-typo;
+                            background-color: #fff;
+                        }
+                    }
+                    input {
+                        background-image: url(/src/resources/images/arrow-down.svg);
+                        background-size: 14px;
+                        background-position: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    input {
+                        display: block;
+                        color: $paragraph-typo;
+                        font-family: "Lato", sans-serif;
+                        font-size: 18px;
+                        width: 100%;
+                        height: 60px;
+                        border: none;
+                        border-bottom: 2px solid rgb($grey-typo, 0.2);
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0 15px 0 0;
+                        margin: 0;
+                        transition: border 0.4s ease;
+                        outline: none;
+                    }
+                }
+                .focused {
+                    input, select {
+                        border-color: $primary;
+                    }
+                }
+                button {
+                    min-width: 180px;
+                    margin: 45px 20px 0 20px;
+                }
+            }
+        }
+    }
+}
+.reservation-modal-open {
+    overflow: hidden;
+
+    .reservation-modal {
+        opacity: 1;
+        visibility: visible;
     }
 }
