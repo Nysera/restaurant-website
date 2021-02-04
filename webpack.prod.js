@@ -9,9 +9,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 module.exports = merge(common, {
     mode: "production",
     output: {
-        // ADD HASH IN FILENAME
         filename: "main.[contenthash].js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        publicPath: '',
     },
     module: { 
         rules: [
@@ -43,4 +43,9 @@ module.exports = merge(common, {
         }),
         new CleanWebpackPlugin()
     ],
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
+    }
 });
