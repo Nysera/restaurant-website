@@ -6,7 +6,7 @@ const formFocus = function(form) {
         }
     });
     form.addEventListener("focusout", function(event) {
-        if (event.target.classList.contains("form-control")) {
+        if (event.target.classList.contains("form-control") && event.target.value === "") {
             const el = event.target.parentElement;
             el.classList.remove("focused");
         }
