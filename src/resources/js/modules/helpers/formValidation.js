@@ -29,9 +29,6 @@ class FormValidation {
                     parent.classList.remove("focused");
                 });
             }
-
-            // DEBUGGER!
-            console.log("validateOnSubmit", this.status);
         });
     }
     validateOnInput() {
