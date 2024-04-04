@@ -22,7 +22,7 @@ const home = function() {
     heroInner.classList.add("hero-inner")
     heroContainer.append(heroInner);
     const heroInnerH1 = document.createElement("h1");
-    heroInnerH1.innerHTML = `Open For Dine <span>In</span> Or Take <span>Out</span>`;
+    heroInnerH1.innerHTML = `Elevate Your Culinary Journey`;
     heroInner.append(heroInnerH1);
 
 
@@ -65,7 +65,7 @@ const home = function() {
 
     // right column paragraph
     const rightColParagraph1 = document.createElement("p");
-    rightColParagraph1.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et elementum augue. Praesent gravida sed quam quis tincidunt. Suspendisse luctus.";
+    rightColParagraph1.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et elementum augue. Praesent gravida sed quam quis tincidunt. Suspendisse luctus. Pellentesque dapibus, leo vitae dignissim luctus, nisi elit convallis tortor, in iaculis sem urna at ipsum. Aenean ligula leo, semper eu elit ut";
     rightCol.append(rightColParagraph1);
 
     // right column paragraph
@@ -85,15 +85,6 @@ const home = function() {
     const reserveBtnSpan = document.createElement("span");
     reserveBtnSpan.innerHTML = "Reserve A Table";
     reserveBtn.append(reserveBtnSpan);
-
-    // order takeout button
-    const orderTakeoutButton = document.createElement("a");
-    orderTakeoutButton.setAttribute("href", "/")
-    orderTakeoutButton.classList.add("btn", "btn-solid");
-    rightColButtonWrapper.append(orderTakeoutButton);
-    const orderTakeoutButtonSpan = document.createElement("span");
-    orderTakeoutButtonSpan.innerHTML = "Order Takeout";
-    orderTakeoutButton.append(orderTakeoutButtonSpan);
 
     // right column image
     const rightColImage = document.createElement("div");
