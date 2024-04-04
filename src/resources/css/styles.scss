@@ -1,6 +1,6 @@
 // colors
-$primary: #a98d65;
-$background: #191a1a;
+$primary: #d3b986;
+$background: #000;
 $paragraph-typo: #F2E9E4;
 $grey-typo: #9c9c9c;
 $dark-typo: #191a1a;
@@ -114,7 +114,6 @@ p {
         left: -100%;
         width: 100%;
         height: 100%;
-        // background-color: #9b4d46;
         background-color: #977c55;
         transition: left 0.4s ease;
     }
@@ -147,7 +146,7 @@ p {
     left: 0;
     width: 100%;
     padding: 26px 20px;
-    background-color: rgba($background, 0.85);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, $background 100%);
     z-index: 100;
     transition: transform 0.4s ease, background-color 0.4s ease;
 
@@ -241,7 +240,7 @@ p {
     }
 }
 .header-top {
-    background-color: transparent;
+    background: transparent;
 }
 .header-hidden {
     transform: translateY(-100%);
@@ -399,7 +398,7 @@ p {
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
-            opacity: 0.6;
+            opacity: 0.8;
         }
         .hero-inner {
             text-align: center;
@@ -412,11 +411,7 @@ p {
                 
                 @media(min-width: 1200px) {
                     font-size: 70px; 
-                }
-
-                span {
-                    color: $primary;
-                }   
+                } 
             }
         }
     }
@@ -444,12 +439,12 @@ p {
 
                 .intro-image {
                     width: 100%;
-                    padding-bottom: 50%;
+                    padding-bottom: 64%;
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
                     @media(min-width: 1000px) {
-                        padding-bottom: 100%;
+                        padding-bottom: 125%;
                     }
                 }
             }
@@ -471,7 +466,7 @@ p {
                     }
                 }
                 .intro-buttons {
-                    margin-top: 45px;
+                    margin-top: 65px;
 
                     button {
                         margin: 0 20px 10px 0;
@@ -484,11 +479,15 @@ p {
                 .intro-image-2 {
                     display: none;
                     width: 100%;
-                    padding-bottom: 50%;
+                    border-style: solid;
+                    border-width: 20px 0 0 20px;
+                    border-color: $background;
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
+                    padding-bottom: 50%;
                     margin: 100px 0 0 -100px;
+
                     @media(min-width: 1000px) {
                         padding-bottom: 100%;
                     }
@@ -507,7 +506,7 @@ p {
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 75vh;
+        height: 85vh;
 
         .menu-image {
             position: absolute;
@@ -518,7 +517,7 @@ p {
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
-            opacity: 0.6;
+            opacity: 0.8;
         }
         .menu-inner {
             position: relative;
@@ -648,10 +647,10 @@ p {
             justify-content: space-between;
             flex-wrap: wrap;
             color: $dark-typo;
+            background: $primary;
             max-width: 1440px;
             padding: 40px;
             margin: 0 auto;
-            background: $primary;
 
             .open-hours {
                 .hours {
@@ -1080,6 +1079,10 @@ p {
 
             .reservation-modal-intro {
                 padding: 0 20px 45px 20px;
+
+                strong {
+                    color: $primary;
+                }
             }
             form {
                 display: flex;
